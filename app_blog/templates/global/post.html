@@ -1,0 +1,20 @@
+{% extends "global/base.html" %}
+
+{% block title %}{{title}}{% endblock title %}
+
+{% block post %}
+
+    <article class="post single-post">
+        <header>
+            <h2 class="post__title">
+                <a href="{% url 'blog:post' post.id %}">
+                    {{post.title}}
+                </a>
+            </h2>
+        </header>
+        <div class="post__body">
+            {{post.body}}
+        </div>
+    </article>
+
+{% endblock post %}
